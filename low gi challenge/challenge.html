@@ -1,0 +1,163 @@
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+
+<style>
+    /* الأنماط الخاصة - لوحة الألوان الباستيل والذهبي الوردي */
+    :root {
+        --primary-color: #F8D0C7; /* وردي فاتح (Blush Pink) */
+        --secondary-color: #E9967A; /* ذهبي وردي خفيف */
+        --text-dark: #495057;
+        --text-light: #6c757d;
+        --bg-light: #FEF9F8; /* خلفية ناعمة */
+    }
+
+    .challenge-section {
+        background-color: white; 
+        border-radius: 20px;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+        padding: 50px;
+        margin-top: 50px;
+        margin-bottom: 50px;
+        border: 2px solid var(--primary-color);
+        /* ضمان التجاوبية على الشاشات الصغيرة */
+        padding: 20px; 
+    }
+
+    .challenge-table thead {
+        background-color: var(--primary-color);
+        color: var(--text-dark);
+    }
+
+    .challenge-table tbody tr:nth-child(odd) {
+        background-color: #FFF2F0; /* تظليل ناعم للصفوف الفردية */
+    }
+    
+    .challenge-table th, .challenge-table td {
+        vertical-align: middle;
+    }
+
+    .badge-glow {
+        background-color: var(--secondary-color);
+        color: white;
+        font-size: 1rem;
+        padding: 5px 15px;
+        border-radius: 15px;
+        font-weight: normal;
+        display: inline-block;
+        min-width: 75px; /* لتوحيد حجم البادج */
+    }
+    
+    .btn-glow-dark {
+        background-color: var(--text-dark);
+        border-color: var(--text-dark);
+        color: white;
+        font-weight: bold;
+        padding: 12px 35px; /* تكبير الزر قليلاً */
+        border-radius: 30px;
+        transition: background-color 0.3s;
+    }
+    .btn-glow-dark:hover {
+        background-color: var(--text-light);
+        border-color: var(--text-light);
+    }
+
+    .swap-icon {
+        color: var(--secondary-color);
+        font-size: 1.2rem;
+        margin: 0 5px;
+    }
+    
+    /* تحسين الخط في الجدول للوضوح على الموبايل */
+    @media (max-width: 768px) {
+        .challenge-section {
+            padding: 15px;
+        }
+        .challenge-table th, .challenge-table td {
+            font-size: 0.85rem;
+            padding: 8px;
+        }
+        /* إخفاء عمود التركيز على الموبايل لتوفير مساحة */
+        .challenge-table th:nth-child(2),
+        .challenge-table td:nth-child(2) {
+            display: none; 
+        }
+    }
+</style>
+
+<div class="container" dir="rtl">
+    <div class="challenge-section" id="challenge">
+        <div class="text-center mb-5">
+            <h2 class="mb-3" style="color: var(--secondary-color); font-weight: 900;"><i class="bi bi-fire"></i> تحدي الـ 7 أيام لـ Low GI <i class="bi bi-fire"></i></h2>
+            <p class="lead text-muted">ابدئي تحولكِ خطوة بخطوة! اختاري وجبة واحدة يومياً لتكون Low GI لمدة 7 أيام.</p>
+            <hr class="w-50 mx-auto" style="border-color: var(--secondary-color);">
+        </div>
+
+        <div class="table-responsive">
+            <table class="table table-hover table-borderless challenge-table text-center">
+                <thead>
+                    <tr>
+                        <th style="width: 15%;">اليوم</th>
+                        <th style="width: 20%;">التركيز</th> 
+                        <th style="width: 65%;">الاستبدال الذكي المقترح (Low GI)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="fw-bold"><span class="badge badge-glow">1</span></td>
+                        <td>الإفطار</td>
+                        <td class="text-end">
+                            <span class="fw-bold">الإفطار - الألياف أولاً:</span> الحبوب السكرية <i class="bi bi-arrow-left swap-icon"></i> <span class="fw-bold" style="color: var(--text-dark);">الشوفان والتوت.</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="fw-bold"><span class="badge badge-glow">2</span></td>
+                        <td>الغداء</td>
+                        <td class="text-end">
+                            <span class="fw-bold">الغداء - نشويات أفضل:</span> الأرز الأبيض <i class="bi bi-arrow-left swap-icon"></i> <span class="fw-bold" style="color: var(--text-dark);">الكينوا أو الأرز البني.</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="fw-bold"><span class="badge badge-glow">3</span></td>
+                        <td>السناك</td>
+                        <td class="text-end">
+                            <span class="fw-bold">السناك - وداعاً للسكر السريع:</span> الحلويات المصنعة <i class="bi bi-arrow-left swap-icon"></i> <span class="fw-bold" style="color: var(--text-dark);">التفاح وزبدة المكسرات.</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="fw-bold"><span class="badge badge-glow">4</span></td>
+                        <td>الخبز</td>
+                        <td class="text-end">
+                            <span class="fw-bold">الخبز - اختريه بحكمة:</span> الخبز الأبيض <i class="bi bi-arrow-left swap-icon"></i> <span class="fw-bold" style="color: var(--text-dark);">خبز الحبوب الكاملة (100%).</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="fw-bold"><span class="badge badge-glow">5</span></td>
+                        <td>المشروبات</td>
+                        <td class="text-end">
+                            <span class="fw-bold">المشروبات - الطاقة الهادئة:</span> العصائر المحلاة <i class="bi bi-arrow-left swap-icon"></i> <span class="fw-bold" style="color: var(--text-dark);">الماء المُنكه بالفواكه والخضار.</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="fw-bold"><span class="badge badge-glow">6</span></td>
+                        <td>البقوليات</td>
+                        <td class="text-end">
+                            <span class="fw-bold">قوة البقول:</span> أضيفي حصة من <span class="fw-bold" style="color: var(--text-dark);">العدس أو الحمص</span> إلى وجبتكِ.
+                        </td>
+                    </tr>
+                    <tr class="fw-bold" style="background-color: var(--primary-color);">
+                        <td class="fw-bold"><span class="badge-glow" style="background-color: var(--text-dark);">7</span></td>
+                        <td>**كامل**</td>
+                        <td class="text-end">
+                            <span class="fw-bold" style="color: var(--text-dark);">التجربة الكبرى:</span> حاولي جعل **3 وجبات** اليوم (الإفطار، الغداء، والسناك) منخفضة المؤشر الجلايسيمي!
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="text-center mt-4 p-3 bg-light rounded-3">
+            <p class="lead mb-0" style="color: var(--text-dark); font-style: italic;"><i class="bi bi-quote"></i> "استقرار سكر الدم هو سر مزاجكِ الجميل وطاقتكِ الثابتة."</p>
+        </div>
+
+    </div>
+</div>
